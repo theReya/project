@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #004d40;
+    background-color: #e0f2f1;
+}
+
+header {
+    width: 100%;
+    background-color: #00796b;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #004d40;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* تعديل الشريط العلوي */
+.navbar {
+    background-color: #00796b; /* استخدام لون موحد للخلفية */
+    border-bottom: 3px solid #005b4f;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 15px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* تعديل الحاوية */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* روابط الشريط العلوي بتفاعل أقل */
+.navbar-link {
+    text-decoration: none;
+    color: #ffffff; /* استخدام نفس اللون للنص */
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 20px;
+    padding: 10px 20px;
+    background-color: #00796b; /* نفس اللون للخلفية */
+    border-radius: 8px;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.navbar-link:hover {
+    color: #e0f2f1; /* تغيير طفيف عند التحويم */
+    border-bottom: 2px solid #e0f2f1; /* تفاعل طفيف بدون تغيير حجم أو شكل الرابط */
+}
+
+
+.main-header {
+    background-color: #00796b; 
+    color: white;
+    padding: 100px 0 50px;
+    text-align: center;
+}
+
+.main-header h1 {
+    font-size: 3rem;
+}
+
+.about-section {
+    background-color: white;
+    padding: 60px 40px;
+    margin: 40px 0;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2.5rem; /* زيادة حجم الخط */
+    margin-bottom: 30px;
+    color: #00796b; 
+    border-bottom: 2px solid #00796b; 
+    padding-bottom: 10px;
+    display: inline-block;
+    font-weight: bold; /* جعل النص عريضاً */
+}
+
+.about-section p {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.2rem; /* زيادة حجم الخط */
+    font-weight: bold; /* جعل النص عريضاً */
+}
+
+
+.responsive-image {
+    display: block;
+    width: 40%;
+    max-width: 250px;
+    height: auto;
+    margin: 30px auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.responsive-image:hover {
+    transform: scale(1.03);
+}
+
+.values-section {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.values-section h2 {
+    font-size: 2.2rem;
+    color: #00796b; 
+    margin-bottom: 40px;
+}
+
+.values-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.value-card {
+    background-color: white;
+    margin: 20px;
+    padding: 30px;
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.value-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #00796b; 
+}
+
+.value-card p {
+    color: #555;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+    }
+
+    .main-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-section, .values-section {
+        padding: 40px 20px;
+    }
+
+    .value-card {
+        width: 100%;
+        max-width: 300px;
+        margin: 20px auto;
+    }
+}
